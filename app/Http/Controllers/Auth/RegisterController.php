@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Model\Tester;
+use App\Model\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
 use \Illuminate\Http\Request;
@@ -40,9 +41,19 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    public function register()
+    public function tester()
     {
-        return view('auth.register', compact('register'));
+        return view('auth.tester', compact('register'));
+    }
+
+    public function choose()
+    {
+        return view('auth.choose', compact('register'));
+    }
+
+    public function company()
+    {
+        return view('auth.company', compact('register'));
     }
 
     /**
@@ -55,8 +66,9 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'fullname' => 'required|string|max:255',
-            'phone' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required|string|max:255',
+            'type' => 'required|string|max:255',
             'password' => 'required|min:6|',
         ]);
     }
@@ -65,7 +77,7 @@ class RegisterController extends Controller
     {
 
         //Validates data
-        //    return $request;
+        // return $request;
         $this->validator($request->all())->validate();
 
         //Create seller
@@ -93,23 +105,51 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Model\User
      */
     protected function create(array $data)
     {
 
         do {
-            $code = 'NH' . md5(uniqid(mt_rand()));
+            $code = 'PF' . md5(uniqid(mt_rand()));
             $hash = User::where('hash', $code)->first();
         } while (!empty($hash));
 
-        return User::create([
+        $type = isset($data['type']) ? $data['type'] : "";
+        $user = User::create([
             'email' => $data['email'],
-            'name' => $data['fullname'],
-            'phone' => $data['phone'],
             'password' => bcrypt($data['password']),
+            'phone' => $data['phone'],
+            'type' => $data['type'],
             'hash' => $this->randomId(),
         ]);
+
+        if ($user) {
+            if ($type == 'tester') {
+                Tester::create([
+                    'tester_userid' => $user->id,
+                    'tester_name' => $data['fullname'],
+                ]);
+            } elseif ($type == 'company') {
+                Company::create([
+                    'company_userid' => $user->id,
+                    'company_name' => $data['name'],
+                ]);
+            } else {
+                $array = array(
+                    'status' => 'error',
+                    'message' => 'Error in creating account, Please choose account type',
+                    // 'location' => $response->data->authorization_url,
+                );
+                return response()->json($array);
+            }
+
+            $array = array(
+                "status" => "success",
+                "message" => "Registration successful",
+            );
+            return response()->json($array);
+        }
     }
 
     public function randomId()

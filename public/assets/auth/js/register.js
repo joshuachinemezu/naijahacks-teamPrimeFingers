@@ -4,6 +4,7 @@ const submitAjaxForm = e => {
   email = document.getElementById("email");
   phone = document.getElementById("phone");
   password = document.getElementById("password");
+  cpassword = document.getElementById("cpassword");
 
   if (!fullname.value) {
     // password.focus();
@@ -34,9 +35,20 @@ const submitAjaxForm = e => {
     // email.focus();
 
     phone.style.borderColor = "red";
-    toastr.warning("Phone Number cannot be empty");
+    toastr.warning("Phone cannot be empty");
   } else {
-    email.style.borderColor = "";
+    phone.style.borderColor = "";
+  }
+
+  if (password.value != cpassword.value) {
+    // email.focus();
+
+    password.style.borderColor = "red";
+    cpassword.style.borderColor = "red";
+    toastr.warning("Password do not match");
+  } else {
+    password.style.borderColor = "";
+    cpassword.style.borderColor = "";
   }
 
   // Prevent double submission by disabling the submit button
@@ -44,9 +56,9 @@ const submitAjaxForm = e => {
 
   // formData = new FormData($form[0]);
   // Send informations
-  if (email.value && password.value && fullname.value && phone.value) {
+  if (email.value && password.value && fullname.value) {
     jQuery.ajax({
-      url: "signup",
+      url: "../signup",
       type: "POST",
       dataType: "json",
       headers: {
@@ -56,10 +68,11 @@ const submitAjaxForm = e => {
       // contentType: false,
       // processData: false,
       data: {
-        phone: phone.value,
         fullname: fullname.value,
         email: email.value,
-        password: password.value
+        phone: phone.value,
+        password: password.value,
+        type: "tester"
       },
       // processData: false,
       // contentType: false,

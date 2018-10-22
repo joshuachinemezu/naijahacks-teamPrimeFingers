@@ -1,64 +1,50 @@
-@extends('layouts.auth.app')
+@extends('layouts.app')
 
 @section('content')
+@include('layouts.partial.header')
 
-<div class="limiter">
-    <div class="container-login100">
-        <div class="wrap-login100">
-            <form class="login100-form validate-form" method="post" name="frmChange" onSubmit="return validateInput(event)">
-                @csrf
-                <a href="{{ route('home') }}" style="color:#20509e" class="login100-form-title p-b-26">
-                    {{ config('app.name', 'Noliah') }}
-                </a>
-                <!-- <span class="login100-form-title p-b-48">
-						<i class="zmdi zmdi-font"></i>
-					</span> -->
-
-                <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-                    <input class="input100" type="text" name="email" id="email">
-                    <span class="focus-input100" data-placeholder="{{ __('Email') }}"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <span class="btn-show-pass">
-                        <i class="zmdi zmdi-eye"></i>
-                    </span>
-                    <input class="input100" type="password" id="password" name="password">
-                    <span class="focus-input100" data-placeholder="{{ __('Password') }}"></span>
-                </div>
-
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button type="submit" class="login100-form-btn disable-btn">
-                            <span class="btn-text">{{ __('Login') }}</span>
-                            <i class="fa fa-spinner fa-spin" id="action-loader"></i>
-                        </button>
+<main class="main-wrapper">
+    <section class="primary-bg-color lefticon-intro-imodules">
+        <div class="section-common-space-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="comments-section">
+                            <h2 class="com-title text-center">Login Now</h2>
+                            <div class="clearfix single-comment mdl-shadow--2dp jumbo-shadow">
+                                <form action="#" class="matx-form-valid">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input"
+                                                    type="email" id="email"><label class="mdl-textfield__label" for="email">Email</label></div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input"
+                                                    type="password" id="password"><label class="mdl-textfield__label"
+                                                    for="password">Password</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-left"><button type="submit" class="mdl-button btn-full mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-black btn-default btn-submit btn-block"
+                                                    disabled="disabled">Login Here</button></div>
+                                        </div>
+                                        <p class="text-center form-txt">Forgot Password? <a href="forgot.html">Click
+                                                here</a></p>
+                                        <p class="text-center ">Don't have an account? <a href="register/choose">Sign
+                                                up here</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="text-center p-t-70">
-                    <span class="txt1">
-                        Forgot password? &nbsp;
-                        <a class="txt2" href="{{ route('home') }}">Recover</a>
-                    </span>
-                    <br />
-                    <span class="txt1">
-                        Don’t have an account?
-                    </span>
-
-                    <a class="txt2" href="{{ route('register') }}">
-                        Sign Up
-                    </a>
-                </div>
-
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-
-
-<div id="dropDownSelect1"></div>
+    </section>
+</main>
+@include('layouts.partial.footer')
 
 @endsection
 

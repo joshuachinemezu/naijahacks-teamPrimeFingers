@@ -1,20 +1,31 @@
-<header class="header-section clearfix">
-    <div class="container-fluid">
-        <a href="{{ route('home') }}" class="site-logo">
-            <!-- <img src="{{asset('assets/img/logo.png')}}" alt=""> -->
-            <span style="font-size: 35px">Noliah</span>
-        </a>
-        <div class="responsive-bar"><i class="fa fa-bars"></i></div>
-        <a href="{{ route('login') }}" class="user"><i class="fa fa-user"></i></a>
-        <a href="{{route('login')}}" class="site-btn">Get Started</a>
-        <nav class="main-menu">
-            <ul class="menu-list">
-                <li><a href="">Solution</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<div class="nav-overlay-bg"></div>
+<header class="main-header init-animation"><a href="index.html" class="logos matx-logo logo-initial init-animation"><img
+            class="logo-dark" src="{{asset('assets/demo/images/logo_lite.png')}}" alt="logo"> <img class="logo-lite" src="{{asset('assets/demo/images/logo_lite.png')}}"
+            alt="logo"></a>
+    <nav class="nav-typo main-nav">
+        <ul>
+            <li class=""><a href="/">HOME</a></li>
+            <li><a href="{{ url('register/tester') }}">GET PAID TO TEST</a></li>
+
+            <li><a href="{{ url('register/company') }}">GET FEED BACK FOR YOUR PRODUCT</a></li>
+
+            <li><a href="{{route('login')}}">LOGIN</a></li>
+
+            <li><a href="{{route('how-it-works')}}">TEST NOW</a></li>
+        </ul>
+    </nav>
+    <div class="mdl-layout__drawer-button mobile-menu-area"><i id="menu-back-btn" class="mobile-menu-ctrl zmdi zmdi-arrow-right"></i>
+        <i id="menu-show-btn" class="mobile-menu-ctrl active zmdi zmdi-menu"></i></div>
 </header>
+<nav class="nav-typo mobile-nav">
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="{{ url('register/tester') }}">GET PAID TO TEST</a></li>
+
+        <li><a href="{{ url('register/company') }}">GET FEED BACK FOR YOUR PRODUCT</a></li>
+
+        <li><a href="{{route('login')}}">LOGIN</a></li>
+
+        <li><a href="{{route('how-it-works')}}">HOW IT WORKS</a></li>
+    </ul>
+</nav>

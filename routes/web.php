@@ -26,8 +26,11 @@ Route::get('reset_password/{token}', ['as' => 'password.reset', function ($token
 Route::group(['middleware' => 'web'], function () {
 
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/register/tester', 'Auth\RegisterController@tester');
+    Route::get('/register/choose', 'Auth\RegisterController@choose');
+    Route::get('/register/company', 'Auth\RegisterController@company');
     Route::post('/signup', 'Auth\RegisterController@signup');
-    Route::get('/register', 'Auth\RegisterController@register')->name('register');
+    Route::get('/how-it-works', 'HowController@index')->name('how-it-works');
     Route::get('/confirm', 'Auth\ConfirmController@index')->name('confirm');
     Route::post('/login', 'Auth\LoginController@login');
     Route::get('/login', 'Auth\LoginController@index')->name('login');
