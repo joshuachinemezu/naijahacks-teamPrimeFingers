@@ -31,7 +31,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/register/company', 'Auth\RegisterController@company');
     Route::post('/signup', 'Auth\RegisterController@signup');
     Route::get('/how-it-works', 'HowController@index')->name('how-it-works');
-    Route::get('/confirm', 'Auth\ConfirmController@index')->name('confirm');
+    Route::get('/register/success', 'Auth\ConfirmController@index')->name('confirm');
     Route::post('/login', 'Auth\LoginController@login');
     Route::get('/login', 'Auth\LoginController@index')->name('login');
 

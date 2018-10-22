@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Model\Company;
 use App\Model\Tester;
 use App\Model\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -133,7 +134,7 @@ class RegisterController extends Controller
             } elseif ($type == 'company') {
                 Company::create([
                     'company_userid' => $user->id,
-                    'company_name' => $data['name'],
+                    'company_name' => $data['company'],
                 ]);
             } else {
                 $array = array(

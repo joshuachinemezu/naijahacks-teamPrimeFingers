@@ -15,10 +15,10 @@
                             <div class="clearfix single-comment mdl-shadow--2dp jumbo-shadow">
                                 <form action="#" class="matx-form-valid">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6" style="padding-bottom:20px">
                                             <div class="text-left"><a href="{{ url('register/tester') }}" class="mdl-button btn-full mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-black btn-default btn-submit btn-block">As
                                                     a Tester</a></div>
-                                        </div><br/><br/>
+                                        </div>
                                         <div class="col-lg-6">
                                             <div class="text-left"><a href="{{ url('register/company') }}" class="mdl-button btn-full mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-black btn-default btn-submit btn-block">As
                                                     a Company</a></div>
