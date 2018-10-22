@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
 
     <!--[if lt IE 9]>
@@ -78,7 +78,6 @@
             '<script type="text/javascript" src="{{asset('assets/js/vendor/jquery-1.10.2.min.js')}}"><\/script>')
     </script>
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCpwYS06r70-Z3E38QhNo62Fa0900gcUic"></script>
-    <script type="text/javascript" src="../../../platform.twitter.com/widgets.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/libs/mdl/material.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/all-plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/common-plugins.js')}}"></script>
@@ -101,7 +100,7 @@
     <script type="text/javascript" src="{{asset('assets/js/all-components.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/main.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/js/option-panel.js')}}"></script>
-    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
 </body>
 <!-- Tha UI Guy - PoeticDev -->

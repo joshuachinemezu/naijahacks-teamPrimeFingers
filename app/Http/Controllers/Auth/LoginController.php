@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Account;
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Model\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 // use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Support\Facades\Auth;
@@ -63,18 +62,11 @@ class LoginController extends Controller
             // attempt to do the login
             if (auth()->attempt($userdata)) {
                 // $user = User::where('id', Auth::user()->id)->first();
-                // dd($user);
-                // var_dump($user->user_fname);exit;
-                // session(['user_fname' => $user->user_fname]);
-                // session(['user_lname' => $user->user_lname]);
-                $hasAccount = Account::where('account_userid', Auth::user()->id)->first();
-
-                $redirectPage = $hasAccount ? "dashboard" : "/social/connect";
 
                 $array = array(
                     "status" => "success",
                     "message" => "Login successful",
-                    "redirectPage" => $redirectPage,
+                    // "redirectPage" => $redirectPage,
                 );
                 return response()->json($array);
             } else {

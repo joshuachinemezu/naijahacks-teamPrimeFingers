@@ -13,7 +13,7 @@
                         <div class="comments-section">
                             <h2 class="com-title text-center">Login Now</h2>
                             <div class="clearfix single-comment mdl-shadow--2dp jumbo-shadow">
-                                <form action="#" class="matx-form-valid">
+                                <form  class="matx-form-valid"  method="post" name="frmChange" onSubmit="return login(event)">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input"
@@ -27,10 +27,15 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="text-left"><button type="submit" class="mdl-button btn-full mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-black btn-default btn-submit btn-block"
-                                                    disabled="disabled">Login Here</button></div>
+                                                <div class="text-left"><button type="submit" class="mdl-button btn-full mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-black btn-default btn-submit btn-block">
+                                                        <span class="btn-text">{{ __('LOGIN') }}</span>
+                                                        <div id="action-loader" style="padding-left:-20px; display: none"
+                                                            class="loader-wrapper">
+                                                            <div class="matx-preloader"></div>
+                                                        </div>
+                                                    </button></div>
                                         </div>
-                                        <p class="text-center form-txt">Forgot Password? <a href="forgot.html">Click
+                                        <p class="text-center form-txt">Forgot Password? <a href="">Click
                                                 here</a></p>
                                         <p class="text-center ">Don't have an account? <a href="register/choose">Sign
                                                 up here</a></p>

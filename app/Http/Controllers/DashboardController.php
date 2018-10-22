@@ -14,7 +14,7 @@ class DashboardController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth', 'social.connect']);
+        $this->middleware(['auth']);
     }
 
     public function index()

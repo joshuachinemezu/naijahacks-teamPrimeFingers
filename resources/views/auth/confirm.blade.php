@@ -33,5 +33,3 @@
 @include('layouts.partial.footer')
 
 @endsection
-
-<script type="text/javascript" src="{{asset('assets/auth/js/register.js')}}"></script>

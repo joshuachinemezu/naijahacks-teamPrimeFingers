@@ -36,8 +36,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/login', 'Auth\LoginController@index')->name('login');
 
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('/social/connect', 'AccountController@index')->name('connect');
-        Route::any('/social/connect/{type}', 'AccountController@connect');
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         Route::post('wallet/update', 'WalletController@update')->name('wallet.update');
     });
