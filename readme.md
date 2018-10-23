@@ -1,6 +1,6 @@
 ## PrimeFingers
 
-[![analysis](https://img.shields.io/badge/analysis%20wsurvey-blue.svg?style=flat-square&colorB=007bff)](https://primefingers.tech/)
+[![analysis](https://img.shields.io/badge/analysis%20survey-blue.svg?style=flat-square&colorB=007bff)](https://primefingers.tech/)
 
 ## GET QUALITY FEEDBACK
 
