@@ -1,5 +1,6 @@
 <div class="nav-overlay-bg"></div>
-<header class="main-header init-animation"><a href="index.html" class="logos matx-logo logo-initial init-animation"><img
+<header class="main-header init-animation">
+        <a href="/" class="logos matx-logo logo-initial init-animation"><img
             class="logo-dark" src="{{asset('assets/demo/images/logo_lite.png')}}" alt="logo"> <img class="logo-lite" src="{{asset('assets/demo/images/logo_lite.png')}}"
             alt="logo"></a>
     <nav class="nav-typo main-nav">
