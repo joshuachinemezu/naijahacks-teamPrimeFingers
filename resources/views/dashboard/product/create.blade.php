@@ -3,7 +3,7 @@
 @section('content')      
 @include('dashboard.partial.header')
       
-      <!-- Page Content -->
+        <!-- Page Content -->
         <!-- ============================================================== -->
         <div id="page-wrapper">
                 <div class="container-fluid">
@@ -31,49 +31,80 @@
     
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="box-title"><strong>Create a New Product</strong></h3>
-                            <p>Set up your test in minutes</p>
                             <div class="white-box">
                                 <div class="row row-in">
-                                    <div class="col-md-4 text-center">
-                                        <h3><strong>Prototype</strong></h3>
-                                        <img src="{{asset('assets/company/img/prototype.svg')}}" class="test-img" />
-                                        <ul class="list-style-none m-b-10">
-                                            <li>Adobe XD</li>
-                                            <li>Figma, Sketch, and more</li>
-                                            <li>Your own prototype URL</li>
-                                        </ul>
-                                        <a href="test-prototype.html" class="btn btn-prime">Test a Prototype</a>
+                                    <div class="panel-wrapper collapse in" aria-expanded="true">
+                                        <div class="panel-body">
+                                            <form action="#">
+                                                <div class="form-body">
+                                                    <h3 class="box-title m-b-20"><strong>Test for an App</strong></h3>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">App Test Title</label>
+                                                                <input type="text" id="productName" class="form-control"
+                                                                    placeholder="Write your App Title"></div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="control-label">App Link</label>
+                                                            <div class="form-group">
+                                                                <input type="url" id="applink" class="form-control"
+                                                                    placeholder="Link to Download app"></div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Test Type</label>
+                                                                <select class="form-control">
+                                                                    <option>--Select Type of Test--</option>
+                                                                    <option>Question Based</option>
+                                                                    <option>A/B Testing</option>
+                                                                    <option>Screen/Audio Recording</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Target Audience</label>
+                                                                <select class="form-control">
+                                                                    <option>--Select based on Skills/Job Occupation--</option>
+                                                                    <option>Students</option>
+                                                                    <option>UX Designers</option>
+                                                                    <option>Elderly</option>
+                                                                    <option>Teachers</option>
+                                                                    <option>Doctors</option>
+                                                                    <option>Bus Driver</option>
+                                                                    <option>Accountants</option>
+                                                                    <option>Married Couples</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                            </form>
+                                            <div class="col-md-12">
+                                                <form action="#" class="dropzone">
+                                                    <label class="control-label">Upload APK File</label>
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" multiple /> </div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
-                                        <h3><strong>Website</strong></h3>
-                                        <img src="{{asset('assets/company/img/website.svg')}}" class="test-img" />
-                                        <ul class="list-style-none m-b-10">
-                                            <li>Computers</li>
-                                            <li>Smartphones</li>
-                                            <li>Tablets</li>
-                                        </ul>
-                                        <a href="test-website.html" class="btn btn-prime">Test a Website</a>
+                                    <div class="form-actions m-t-20">
+                                        <a href="test-prototype-2.html" class="btn btn-prime">Next</a>
                                     </div>
-                                    <div class="col-md-4 text-center">
-                                        <h3><strong>App</strong></h3>
-                                        <img src="{{asset('assets/company/img/mobile-app.svg')}}" class="test-img" />
-                                        <ul class="list-style-none m-b-10">
-                                            <li>iOS</li>
-                                            <li>Android</li>
-                                            <li>Unreleased apps</li>
-                                        </ul>
-                                        <a href="test-app.html" class="btn btn-prime">Test an App</a>
-                                    </div>
+    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /.container-fluid -->
-                <footer class="footer text-center"> 2018 &copy; Prime Fingers </footer>
             </div>
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2018 &copy; Prime Fingers </footer>
+        </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
         <!-- ============================================================== -->
+    
         @endsection
