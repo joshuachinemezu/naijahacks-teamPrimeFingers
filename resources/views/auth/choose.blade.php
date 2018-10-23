@@ -13,7 +13,6 @@
                         <div class="comments-section">
                             <h2 class="com-title text-center">Sign up Here</h2>
                             <div class="clearfix single-comment mdl-shadow--2dp jumbo-shadow">
-                                <form action="#" class="matx-form-valid">
                                     <div class="row">
                                         <div class="col-lg-6" style="padding-bottom:20px">
                                             <div class="text-left"><a href="{{ url('register/tester') }}" class="mdl-button btn-full mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-black btn-default btn-submit btn-block">As
@@ -28,7 +27,6 @@
                                         <p class="text-center form-txt">Already have an Account? <a href="{{route('login')}}">Login
                                                 here</a></p>
                                     </div>
-                                </form>
                             </div>
                         </div>
                     </div>
