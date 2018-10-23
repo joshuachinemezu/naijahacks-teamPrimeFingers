@@ -37,7 +37,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::group(['middleware' => 'auth'], function () {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-        Route::post('wallet/update', 'WalletController@update')->name('wallet.update');
+        Route::any('add_product', 'ProductController@create')->name('add_product');
     });
 });
 
