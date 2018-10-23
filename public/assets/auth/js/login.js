@@ -61,7 +61,7 @@ const login = e => {
           toastr.warning(data.message);
           return null;
         } else {
-          toastr.warning(data.message);
+          toastr.success(data.message);
           window.location = "dashboard";
         }
       },
