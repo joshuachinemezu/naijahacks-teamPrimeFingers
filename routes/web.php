@@ -39,6 +39,8 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         Route::any('add_product', 'ProductController@create')->name('add_product');
         Route::any('create_product/{type}', 'ProductController@store')->name('create_product');
+        Route::any('create_product/link/{type}', 'ProductController@link')->name('link');
+        Route::any('create_product/task/{type}', 'ProductController@task')->name('task');
     });
 });
 

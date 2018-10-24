@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class="form-actions m-t-20">
-                                        <a href="test-prototype-2.html" class="btn btn-prime">Next</a>
+                                        <a href="{{url('create_product/link/new')}}" class="btn btn-prime">Next</a>
                                     </div>
     
                                 </div>

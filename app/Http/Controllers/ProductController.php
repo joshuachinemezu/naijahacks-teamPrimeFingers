@@ -44,9 +44,20 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function link($id)
     {
-        //
+        return view('dashboard.product.link');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function task($id)
+    {
+        return view('dashboard.product.task');
     }
 
     /**
