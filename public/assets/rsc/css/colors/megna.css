@@ -1,4 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900);
+@import url(
+  https://fonts.googleapis.com/css?family=Rubik:300,
+  400,
+  500,
+  700,
+  900
+);
 
 /*Theme Colors*/
 /*bootstrap Color*/
@@ -44,7 +50,7 @@ body {
   border-bottom: 1px solid rgba(120, 130, 140, 0.13);
 }
 
-.navbar-top-links>li>a {
+.navbar-top-links > li > a {
   color: #686868;
 }
 
@@ -58,12 +64,12 @@ body {
 
 /*Right panel*/
 .right-sidebar .rpanel-title {
-  background: #5CE52C;
+  background: #12b8ff;
 }
 
 /*Bread Crumb*/
 .bg-title .breadcrumb .active {
-  color: #5CE52C;
+  color: #12b8ff;
 }
 
 /*Sidebar*/
@@ -85,23 +91,23 @@ body {
   border-left: 0px solid #fff;
 }
 
-#side-menu>li>a:hover,
-#side-menu>li>a:focus {
+#side-menu > li > a:hover,
+#side-menu > li > a:focus {
   background: rgba(0, 0, 0, 0.07);
 }
 
-#side-menu>li>a.active {
-  background: #5CE52C;
+#side-menu > li > a.active {
+  background: #12b8ff;
   color: #ffffff;
   font-weight: 500;
 }
 
-#side-menu ul>li>a:hover {
-  color: #5CE52C;
+#side-menu ul > li > a:hover {
+  color: #12b8ff;
 }
 
-#side-menu ul>li>a.active {
-  color: #5CE52C;
+#side-menu ul > li > a.active {
+  color: #12b8ff;
   font-weight: 500;
 }
 
@@ -115,42 +121,42 @@ body {
 }
 
 .bg-theme-dark {
-  background-color: #5CE52C !important;
+  background-color: #12b8ff !important;
 }
 
 /*Button*/
 .btn-custom {
-  background: #5CE52C;
-  border: 1px solid #5CE52C;
+  background: #12b8ff;
+  border: 1px solid #12b8ff;
   color: #ffffff;
 }
 
 .btn-custom:hover {
-  background: #5CE52C;
+  background: #12b8ff;
   opacity: 0.8;
   color: #ffffff;
-  border: 1px solid #5CE52C;
+  border: 1px solid #12b8ff;
 }
 
 /*Custom tab*/
 .customtab li.active a,
 .customtab li.active a:hover,
 .customtab li.active a:focus {
-  border-bottom: 2px solid #5CE52C;
-  color: #5CE52C;
+  border-bottom: 2px solid #12b8ff;
+  color: #12b8ff;
 }
 
 .tabs-vertical li.active a,
 .tabs-vertical li.active a:hover,
 .tabs-vertical li.active a:focus {
-  background: #5CE52C;
-  border-right: 2px solid #5CE52C;
+  background: #12b8ff;
+  border-right: 2px solid #12b8ff;
 }
 
 /*Nav-pills*/
-.nav-pills>li.active>a,
-.nav-pills>li.active>a:focus,
-.nav-pills>li.active>a:hover {
-  background: #5CE52C;
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+  background: #12b8ff;
   color: #ffffff;
 }

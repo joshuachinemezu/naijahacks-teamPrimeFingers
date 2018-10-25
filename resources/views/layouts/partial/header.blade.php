@@ -12,7 +12,7 @@
 
             <li><a href="{{route('login')}}">LOGIN</a></li>
 
-            <li><a href="{{route('how-it-works')}}">TEST NOW</a></li>
+            <li><a href="{{route('login')}}">TEST NOW</a></li>
         </ul>
     </nav>
     <div class="mdl-layout__drawer-button mobile-menu-area"><i id="menu-back-btn" class="mobile-menu-ctrl zmdi zmdi-arrow-right"></i>

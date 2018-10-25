@@ -4,7 +4,7 @@
                 <!-- Toggle icon for mobile view -->
                 <div class="top-left-part">
                     <!-- Logo -->
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="{{url('/')}}">
                         Prime Fingers
                     </a>
                 </div>
