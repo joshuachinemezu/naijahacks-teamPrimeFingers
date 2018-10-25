@@ -18,7 +18,7 @@
                             <h1 class="section-title">Get quality feedback </h1>
                             <h3 class="section-subtitle boderad-subtitle">Before launching your product, test and
                                 validate your product get user quality user feedback.</h3>
-                            <div style="margin-top: 40px"><a href="{{ url('register/tester') }}" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight btn-large"
+                            <div style="margin-top: 40px"><a href="{{ url('register/tester') }}"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight btn-large"
                                     rel="nofollow">Test Now</a></div>
                         </div>
                     </div>
